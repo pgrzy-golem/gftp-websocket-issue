@@ -143,7 +143,7 @@ class FileServer {
 
 // await main();
 
-async function main(APPKEY: string) {
+async function main(APPKEY: string, key: string) {
   // const fileName = Deno.args[0];
   // const file = await Deno.open(fileName, { read: true });
   const file = content;
@@ -153,7 +153,7 @@ async function main(APPKEY: string) {
   //   hash.update(chunk);
   // }
   // const key = hash.toString()
-  const key = md5(content, { encoding: 'hex' });
+  // const key = md5(content, { encoding: 'hex' });
 
   console.log("appkey", APPKEY);
   if (APPKEY === undefined) {

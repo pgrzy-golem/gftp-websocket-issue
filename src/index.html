@@ -29,8 +29,9 @@
   }
 
   function runDeno() {
-    const key = document.querySelector("#apikey").value;
-    window["gftpMain"](key);
+    const appkey = document.querySelector("#apikey").value;
+    const fileid = document.querySelector("#fileid").value;
+    window["gftpMain"](appkey);
   }
 
 </script>
@@ -38,7 +39,9 @@
 <body>
 <button onclick="connect()">Connect - plain websocket to test server</button>
 <hr/>
-<input type="text" id="apikey" placeholder="API Key"/>
+API Key:<br/><input type="text" id="apikey" placeholder="API Key"/><br/>
+File ID:<br/><input type="text" id="fileid" placeholder="File ID" value="4c4712a4141d261ec0ca8f9037950685"/><br/>
+<small>A single ID can be used only once, please edit it after each call</small><br/><br/>
 <button onclick="runDeno()">Run deno gftp example</button>
 </body>
 </html>
